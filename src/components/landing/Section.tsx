@@ -83,14 +83,12 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
     return (
       <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24 overflow-hidden">
         <div
-          className="absolute right-0 top-0 h-full w-1/2 md:w-2/5 pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: 'url(https://cdn.poehali.dev/projects/5d972cd9-de95-4814-b26f-7a1593951e0d/files/8a91b87a-2be7-45ca-b629-4cab9f5779a9.jpg)',
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/5d972cd9-de95-4814-b26f-7a1593951e0d/files/6ee74ecc-779f-46a6-b125-51a915f19892.jpg)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-            opacity: 0.35,
-            maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%)',
-            WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%)',
+            backgroundPosition: 'center',
+            opacity: 0.18,
           }}
         />
         {subtitle && (
@@ -102,21 +100,22 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           initial={{ opacity: 0, y: 50 }}
           animate={isActive ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-4 mb-4"
+          className="flex items-center gap-5 mb-4"
         >
-          <span className="text-5xl">🐻</span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none tracking-tight text-white">
-            LUCKY<span className="text-[#FFD700]">BEAR</span>
-          </h1>
+          <img
+            src="https://cdn.poehali.dev/projects/5d972cd9-de95-4814-b26f-7a1593951e0d/bucket/e8422093-8dba-4743-a5df-ae7d06ca3950.png"
+            alt="LuckyBear"
+            className="w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-[0_0_16px_rgba(100,160,255,0.6)]"
+          />
+          <div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none tracking-tight text-white">
+              LUCKY<span className="text-[#FFD700]">BEAR</span>
+            </h1>
+            <div className="text-xl md:text-2xl lg:text-3xl font-bold text-[#FFD700] tracking-widest mt-1">
+              PARTNERS
+            </div>
+          </div>
         </motion.div>
-        <motion.h2
-          className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFD700] mb-4 tracking-widest"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isActive ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.15 }}
-        >
-          PARTNERS
-        </motion.h2>
         <motion.p
           className="text-lg md:text-xl max-w-xl mt-4 text-neutral-300 leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
@@ -509,7 +508,11 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           animate={isActive ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <span className="text-4xl">🐻</span>
+          <img
+            src="https://cdn.poehali.dev/projects/5d972cd9-de95-4814-b26f-7a1593951e0d/bucket/e8422093-8dba-4743-a5df-ae7d06ca3950.png"
+            alt="LuckyBear"
+            className="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(100,160,255,0.5)]"
+          />
           <span className="text-white font-black text-2xl tracking-widest">LUCKYBEAR<span className="text-[#FFD700]"> PARTNERS</span></span>
         </motion.div>
         <motion.h2
