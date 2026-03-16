@@ -83,12 +83,14 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
     return (
       <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24 overflow-hidden">
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute right-0 top-0 h-full w-1/2 md:w-2/5 pointer-events-none"
           style={{
-            backgroundImage: 'url(https://cdn.poehali.dev/projects/5d972cd9-de95-4814-b26f-7a1593951e0d/files/6ee74ecc-779f-46a6-b125-51a915f19892.jpg)',
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/5d972cd9-de95-4814-b26f-7a1593951e0d/files/52cd821d-2467-425a-b99e-c747442eb216.jpg)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.18,
+            backgroundPosition: 'center top',
+            opacity: 0.35,
+            maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%)',
+            WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%)',
           }}
         />
         {subtitle && (
