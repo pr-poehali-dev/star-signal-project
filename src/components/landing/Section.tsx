@@ -566,9 +566,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           initial={{ opacity: 0 }}
           animate={isActive ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          © 2024 LuckyBear Partners. Все права защищены.
-        </motion.p>
+        >© 2026 LuckyBear Partners. Все права защищены.</motion.p>
       </section>
     )
   }
